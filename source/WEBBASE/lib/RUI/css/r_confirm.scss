@@ -1,0 +1,51 @@
+.r_confirm_wrapper {
+    .r_confirm_title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.5em ;
+        font-weight:bolder ;  
+        text-align: center ;
+        padding-bottom: 10px ;
+        border-bottom: 1px solid gray ;
+        
+    }
+    
+    .r_confirm_content {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        
+    }
+    
+    .r_confirm_buttons {
+        padding: 3px ;
+        margin-top: 15px;
+        
+        table {
+            td {
+                text-align: center ;
+            }
+        }
+        
+        .btn {
+            background: white;
+            border: 1px solid red;
+            border-radius: 99px;
+            padding: 10px;
+            width: 100px;
+            
+            &.r_confirm_yes_button {
+                color: white ;
+                background: red ;
+            }
+            
+            &.r_confirm_no_button {
+                color: red ;
+                background: white ;
+            }
+            
+        }
+        
+        
+    }
+}

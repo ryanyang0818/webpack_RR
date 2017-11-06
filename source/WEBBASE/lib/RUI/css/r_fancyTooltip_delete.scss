@@ -1,0 +1,72 @@
+$baseBgColor: #DDD ;
+$baseIconSize: 64 ;
+$baseTextHeight: 30 ;
+
+.r_fancytooltip-container.fancybox-wrap {
+    
+    .fancybox-skin {
+        background: $baseBgColor ;
+    }
+    
+    .r_fancytooltip-innerContainer {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        
+        .r_fancytooltip-row {
+            overflow-x: auto;
+            border-top: 1px solid gray;
+            padding-top: 10px;
+            height: 122px ;
+            
+            .r_fancytooltip-block {
+                text-align: center;
+                cursor: pointer ;
+                display:table-cell ;
+                padding-left: 10px ;
+                height: #{$baseIconSize + $baseTextHeight}px ;
+                overflow: hidden;
+            }
+        
+            .r_fancytooltip-icon {
+                background: white ;
+                width: #{$baseIconSize}px ;
+                height: #{$baseIconSize}px ;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto ;
+                border-radius: 15px;
+            }
+            .r_fancytooltip-text {
+                height: #{$baseTextHeight}px;
+                overflow: hidden;
+            }
+        
+        }
+        
+        .r_fancytooltip-row:first-child {
+            border-top: none ;
+        }
+    }
+    
+    .r_fancytooltip-arrow.up {
+        position: absolute;
+        width: 20px ;
+        height: 20px ;
+        border-left: solid transparent 10px;
+        border-right: solid transparent 10px;
+        border-top: solid transparent 10px;
+        border-bottom: solid $baseBgColor 10px;
+    } 
+    
+    .r_fancytooltip-arrow.down {
+        position: absolute;
+        width: 20px ;
+        height: 20px ;
+        border-left: solid transparent 10px;
+        border-right: solid transparent 10px;
+        border-bottom: solid transparent 10px;
+        border-top: solid $baseBgColor 10px;
+    }
+}
+

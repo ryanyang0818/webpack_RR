@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+}
+
+.r_sp_body {
+    overflow-x: hidden;
+    overflow: hidden ;
+}
+
+.r_sp_body .r_sp_mask {
+    position: absolute;
+    top: -100px;
+    left: -100px;  
+    width: 9999px;
+    height: 9999px;
+    opacity: 0.8;
+    z-index:999 ;
+}
+
+.r_sp_body-pushright { 
+    
+}
+
+.r_sp_body-pushleft {
+    
+}
+
+.r_sp_panel.r_sp_toright_panel, .r_sp_panel.r_sp_toleft_panel {
+    display:block ;
+    position: fixed ;
+    top: 0 ;
+    z-index: 1000 ;
+    width: 0 ;
+    height: 100% ;
+    overflow-x: auto;
+    visibility: hidden ;
+}
+
+.r_sp_panel.r_sp_totop_panel, .r_sp_panel.r_sp_tobottom_panel {
+    display:block ;
+    position: fixed ;
+    bottom: -100% ;
+    z-index: 1000 ;
+    width: 100% ;
+    height: 100% ;
+    overflow-x: auto;
+    visibility: hidden ;
+}
+
+.r_sp_toright_panel.r_sp_panel_open {
+    display: block ;
+    box-shadow: 1px 1px 1px #000000 ;
+}
+
+.r_sp_toleft_panel.r_sp_panel_open {
+    display: block ;
+    box-shadow: -1px 1px 1px #000000 ;
+}
+
+/* Transitions */
+.r_sp_body ,
+.r_sp_panel {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.r_sp_blur {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}

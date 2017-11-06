@@ -1,0 +1,28 @@
+.r_page_wrapper {
+    overflow: hidden;
+    position: absolute ;
+    top: 0 ;
+    left: 0 ;
+    width: 100% ;
+    height: 100% ;
+}
+.r_page {
+    position: absolute ;
+    top: 0 ;
+    left: 0 ;
+    width: 100% ;
+    height: 100% ;
+    z-index: 10 ;
+}
+
+.r_page_wait {
+    z-index: 11 ;
+}
+
+.r_page_active {
+    z-index: 12 ;
+}
+
+.r_page_animating {
+    box-shadow: 0px 1px 10px #000000;
+}

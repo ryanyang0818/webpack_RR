@@ -1,0 +1,49 @@
+.r_uploader-container {
+    .r_uploader_innerContainer {
+        height:100%;
+    }
+    
+    .r_uploader_dragZone {
+        text-align: center;
+        position: relative;
+        border: 1px dashed #00B2B2;
+    }
+    
+    .r_uploader_cloudImg {
+        font-size: 100px;
+    }
+    
+    .r_uploader_cloudText {
+        
+    }
+    
+    .r_uploader_fileInput {
+        padding-top:10px;
+    }
+    
+    .r_uploader_fileNameZone {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align:right;
+        min-height: 20px;
+    }
+    
+    .r_uploader_fileName {
+        display: none;
+    }
+    
+    .r_uploader_progressbarZone {
+        .r_uploader_progressbar {
+            
+            height:5px; border:1px solid black;
+            
+        }
+        .r_uploader_progressbarValue {
+            
+            height:3px;
+            width:0%;
+            background: black ;
+            
+        }
+    }
+}

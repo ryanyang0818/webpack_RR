@@ -1,0 +1,44 @@
+$baseBgColor: #DDD ;
+.r_PUCKtooltip_wrpper {
+    height: 100% ;
+    .r_PUCKtooltip_row {
+        
+        overflow-x: auto;
+        border-top: 1px solid gray;
+        padding-top: 10px;
+        height: 125px;
+        
+        .r_PUCKtooltip_block {
+            text-align: center;
+            cursor: pointer;
+            display: table-cell;
+            padding-left: 10px;
+            height: 94px;
+            overflow: hidden;
+            
+            .r_PUCKtooltip_blockIcon {
+                background: white;
+                width: 64px;
+                height: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                border-radius: 15px;
+                padding-top: 15px \9 ;
+            }
+            
+            .r_PUCKtooltip_blockText {
+                height: 30px;
+                overflow: hidden;
+            }
+            
+        }
+        
+    }
+    
+    .r_PUCKtooltip_row:first-child {
+        border-top: none;
+    }
+    
+}

@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+}
+
+$R_DROPDOWN-MENU-H : 35 ;
+/* 一般選項的padding */
+$R_DROPDOWN-MENU-LEFTP-NORMAL : 5 ;
+$R_DROPDOWN-MENU-LEFTP-NORMAL-COLOR : transparent ;
+/* 第一層巢狀表單的padding */
+$R_DROPDOWN-MENU-LEFTP : 5 ;
+$R_DROPDOWN-MENU-LEFTP-COLOR : #FF0000 ;
+$R_DROPDOWN-MENU-ICON : '\f105' ;
+$R_DROPDOWN-MENU-ICON-OPEN : '\f0d7' ;
+/* 其他巢狀表單的padding */
+$R_DROPDOWN-MENU-PADDING-NESTED : 10 ;
+$R_DROPDOWN-MENU-LEFTP-NESTED : 5 ;
+$R_DROPDOWN-MENU-LEFTP-COLOR-NESTED : GRAY ;
+$R_DROPDOWN-MENU-ICON-NESTED : '\f105' ;
+$R_DROPDOWN-MENU-ICON-OPEN-NESTED : '\f0d7' ;
+/* 每橫條底色顏色 */
+$R_DROPDOWN-MENU-BOTTOM-COLOR : WHITE ;
+/* 文字顏色 */
+$R_DROPDOWN-MENU-TEXT-COLOR : GRAY ;
+$R_DROPDOWN-MENU-TEXT-COLOR-HOVER : WHITE ;
+/* HOVER底色 */
+$R_DROPDOWN-MENU-BG-COLOR-HOVER : #da3636 ;
+.r_dropdown {
+    position: absolute ;
+    min-width: 200px ;
+    right: 0 ;
+    
+    &.r_dropdown-right {
+        right: 0 ;
+    }
+     
+    &.r_dropdown-left {
+        left: 0 ;
+    }
+    
+}
+
+.r_dropdown-menu {
+    /*基本規則*/
+    background: black ;
+    display: none ;
+    list-style-type: none ;
+    padding: 0px ;
+    a:active,a:hover,a:focus,a:visited {
+        text-decoration: none ;
+    }
+    li {
+        
+        &:first-child {
+            /* need fixed */
+            border-top: 0px solid $R_DROPDOWN-MENU-BOTTOM-COLOR;
+        }
+        &:last-child {
+            border-bottom: 0px solid $R_DROPDOWN-MENU-BOTTOM-COLOR;
+        }
+        border-bottom: 0px solid white ;
+        
+        
+        height: #{$R_DROPDOWN-MENU-H}px ;
+        line-height: #{$R_DROPDOWN-MENU-H}px ;
+        background: black ;
+        
+        a {
+            color: $R_DROPDOWN-MENU-TEXT-COLOR ;
+            border-left: #{$R_DROPDOWN-MENU-LEFTP-NORMAL}px solid $R_DROPDOWN-MENU-LEFTP-NORMAL-COLOR ;
+            display:block ;
+            width: 100% ;
+            position: relative ;
+            
+            &:hover {
+                color: $R_DROPDOWN-MENU-TEXT-COLOR-HOVER ;
+            }
+            
+        }
+    }
+    .r_dropdown-menu {
+        /*每層左邊的間距*/
+        
+    }
+    
+
+    &.open {
+        display: block;
+    }
+    
+    .r_dropdown-submenu {
+        >.r_dropdown-submenu-title {
+            border-left: #{$R_DROPDOWN-MENU-LEFTP}px solid transparent ;
+            
+            &::after {
+                font-family: fontAwesome;
+                font-size: 8px;
+                line-height: 1;
+                position: relative;
+                top: -1px;
+                margin-left: 7px;
+                content: $R_DROPDOWN-MENU-ICON;
+                color: $R_DROPDOWN-MENU-TEXT-COLOR ;
+            }
+        }
+        
+        &:not(.open) {
+            >.r_dropdown-menu {
+                display: none ;
+            }
+        }
+        
+        &.open {
+            li{
+                padding-left: #{$R_DROPDOWN-MENU-PADDING-NESTED}px ;
+                
+                &.r_dropdown-item:hover {
+                    background: $R_DROPDOWN-MENU-BG-COLOR-HOVER ;
+                }
+                
+            }
+            
+            
+            height: inherit ;
+            
+            /*submenu有open的，裡面的menu顯示*/
+            >.r_dropdown-menu {
+                display: block ;
+            }
+            
+            >.r_dropdown-submenu-title {
+                border-left: #{$R_DROPDOWN-MENU-LEFTP}px solid #{$R_DROPDOWN-MENU-LEFTP-COLOR} ;
+                color: $R_DROPDOWN-MENU-TEXT-COLOR-HOVER ;
+                
+                &::after {
+                    font-family: fontAwesome;
+                    font-size: 8px;
+                    line-height: 1;
+                    position: relative;
+                    top: -1px;
+                    margin-left: 7px;
+                    content: $R_DROPDOWN-MENU-ICON-OPEN;
+                    color: $R_DROPDOWN-MENU-TEXT-COLOR-HOVER ;
+                }
+            }
+
+            /* 第二層 */
+            .r_dropdown-submenu {
+
+                >.r_dropdown-submenu-title {
+                    &::after {
+                        font-family: fontAwesome;
+                        font-size: 8px;
+                        line-height: 1;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -5px;
+                        right: 20px;
+                        content: $R_DROPDOWN-MENU-ICON-NESTED;
+                        color: $R_DROPDOWN-MENU-TEXT-COLOR ;
+                    }
+                }
+                
+                &.open {
+                    >.r_dropdown-submenu-title {
+                        border-left: #{$R_DROPDOWN-MENU-LEFTP-NESTED}px solid #{$R_DROPDOWN-MENU-LEFTP-COLOR-NESTED} ;
+                        
+                        &::after {
+                            font-family: fontAwesome;
+                            font-size: 8px;
+                            line-height: 1;
+                            position: absolute;
+                            top: 50%;
+                            margin-top: -5px;
+                            right: 20px;
+                            content: $R_DROPDOWN-MENU-ICON-OPEN-NESTED;
+                            color: $R_DROPDOWN-MENU-TEXT-COLOR-HOVER ;
+                        } 
+                    }
+                    
+                }
+            }
+        
+        }
+        
+    }
+    
+    /* media setting */
+    @media (min-width: 768px) {
+        
+    }
+    
+}

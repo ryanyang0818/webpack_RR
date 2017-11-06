@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+
+.r_toast_wrapper {
+    height: 1px ;
+    text-align: center ;
+    position:fixed ;
+    width: 100% ;
+    z-index: 8050;
+    .r_toast_content {
+        display:inline-block ; 
+        position: relative ;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+ 

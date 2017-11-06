@@ -1,0 +1,57 @@
+$baseBgColor: #DDD ;
+    
+.r_tooltip_wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 9000;
+    .r_tooltip_mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        opacity: 0.5;
+        opacity: 0 \9 ;
+        z-index: 9000;
+        background: black;
+        z-index: 9001;
+    }
+    
+    .r_tooltip_dialog {
+        position: absolute;
+        background: $baseBgColor ;
+        border-radius: 5px;
+        z-index: 9002;
+    }
+        
+    .r_tooltip_arrow {
+        display: none; 
+        position: absolute;
+        width: 20px ;
+        height: 20px ;
+        border-left: solid transparent 10px;
+        border-right: solid transparent 10px;
+    }
+    
+    .r_tooltip_arrow.bottom {
+        display: block ; 
+        top: -20px ;
+        border-top: solid transparent 10px;
+        border-bottom: solid $baseBgColor 10px;
+    }
+    
+    .r_tooltip_arrow.top {
+        display: block ; 
+        bottom: -20px ;
+        border-bottom: solid transparent 10px;
+        border-top: solid $baseBgColor 10px;
+    }
+
+    .r_tooltip_dialogContainer {
+        width: 100% ;
+        height: 100% ;
+    }        
+}
